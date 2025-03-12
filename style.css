@@ -1,0 +1,148 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffe0f0, #e6dcfc, #d0e8ff);
+}
+
+.rose-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: auto;
+  transform-origin: center center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-section {
+  padding: 80px 20px;
+}
+
+.welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #884ea0;
+}
+
+.love-message {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.gallery-section,
+.poetry-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-section h2,
+.poetry-section h2 {
+  margin-bottom: 30px;
+  color: #884ea0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.col {
+  flex: 0 0 300px;
+  margin: 10px;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  max-height: 300px;
+}
+
+.poetry-line {
+  font-size: 1.1em;
+  line-height: 2; /* Increased line-height for better spacing */
+  font-weight: bolder;
+  color: #333; /* Changed color to dark gray for better contrast */
+  margin-bottom: 15px;
+  /* Added a more prominent text shadow with a blur radius */
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+}
+
+.holi-colors {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.holi-color {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: holi-scatter 5s linear infinite;
+}
+
+@keyframes holi-scatter {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(100vw * (Math.random() - 0.5)),
+      calc(100vh * (Math.random() - 0.5))
+    );
+    opacity: 0;
+  }
+}
+
+.gift-box {
+  width: 300px;
+  height: 300px;
+  background-image: url("gift-box.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
